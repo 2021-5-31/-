@@ -5,7 +5,7 @@
 2.<br>
 **问题：** 在使用反向否定查找（/(?<!)/）正则时，webpack构建报错SyntaxError: Invalid regular expression<br>
 **原因：** 可能是babel无法解析反向否定查找这种规则<br>
-**解决：** 不要用字面量创建正则，使用构造函数，例如 new RegExp('(?<!)')<br>
+**解决：** 不要用字面量创建正则，使用构造函数，这种方式就不会使用babel解析，例如 new RegExp('(?<!)')<br>
 3.<br>
 **问题：** 如何刷新vue子组件<br>
 **原因：**<br>
